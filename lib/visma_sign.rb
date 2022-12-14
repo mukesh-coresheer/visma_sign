@@ -137,6 +137,8 @@ module VismaSign
       REQUIRED_ENV.each do |env|
         missing_env << env unless ENV.key?(env)
       end
+
+      raise missing_env.join(',') if missing_env.present?
     end
   end
 end
