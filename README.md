@@ -4,6 +4,9 @@ Welcome to your new gem! In this directory, you'll find the files you need to be
 
 This gem is used for accessing visma sign api.
 
+####### NOTE
+Development in progress for updating
+
 # API documentation
 https://sign.visma.net/api/docs/v1/
 
