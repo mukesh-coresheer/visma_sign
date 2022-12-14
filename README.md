@@ -27,8 +27,14 @@ Below are the required ENV for API to work
   VISMAUSERNAME=<test@test.com>
   VISMAPASSWORD=<login password>
   GRANTTYPE=password
-  VISMACLIENTID=<visma-client-id>
+  VISMACLIENTID=<visma-client-uuid>
   VISMASCOPE=authorize_client billing_events_get category_create
+```
+
+Optional ENV
+```ruby
+  AS_ORGANIZATION=<organization uuid>
+  TEST_EMAIL=<overide the email for sending invitation>
 ```
 Available GRANTTYPE
 
