@@ -4,10 +4,13 @@ require_relative "visma_sign/version"
 
 module VismaSign
   class Error < StandardError; end
+
   class Api
     attr_accessor :token, :base_url
+    REQUIRED_ENV = %w[VISMAUSERNAME VISMAPASSWORD GRANTTYPE VISMACLIENTID VISMASCOPE].freeze
 
     def initialize
+      check_for_env
       @base_url = "https://vismasign.frakt.io"
       login
     end
@@ -127,6 +130,13 @@ module VismaSign
       )
     rescue RestClient::ExceptionWithResponse => e
       e.response
+    end
+
+    def check_for_env
+      missing_env = []
+      REQUIRED_ENV.each do |env|
+        missing_env << env unless ENV.key?(env)
+      end
     end
   end
 end
