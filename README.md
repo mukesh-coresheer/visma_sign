@@ -4,6 +4,9 @@ Welcome to your new gem! In this directory, you'll find the files you need to be
 
 This gem is used for accessing visma sign api.
 
+# API documentation
+https://sign.visma.net/api/docs/v1/
+
 ## Installation
 
 Add this line to your application's Gemfile:
