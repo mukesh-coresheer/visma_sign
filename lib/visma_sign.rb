@@ -49,6 +49,14 @@ module VismaSign
       )
     end
 
+    def invitation(uuid)
+      JSON.parse(
+        request(
+          "/api/v1/invitation/#{uuid}", headers, :get
+        ).body
+      )
+    end
+
     def search_document(payload: {})
       url = URI("/api/v1/document/")
       url.query = payload.to_query if payload.present?
