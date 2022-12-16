@@ -55,7 +55,7 @@ module VismaSign
     def invitation(uuid)
       JSON.parse(
         request(
-          "/api/v1/invitation/#{uuid}", headers, :get
+          "/api/v1/invitation/#{uuid}", {}, headers, :get
         ).body
       )
     end
